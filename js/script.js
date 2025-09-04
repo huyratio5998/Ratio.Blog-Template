@@ -151,3 +151,14 @@ if (getStartedBtn) {
     }
   };
 }
+
+// star background
+const starsBg = document.querySelector(".stars-bg");
+for (let i = 0; i < 80; i++) {
+  const star = document.createElement("div");
+  star.className = "star";
+  star.style.top = Math.random() * 100 + "vh";
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.animationDuration = 1 + Math.random() * 2 + "s";
+  starsBg.appendChild(star);
+}
