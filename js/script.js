@@ -152,13 +152,25 @@ if (getStartedBtn) {
   };
 }
 
-// star background
+// leaf background
 const starsBg = document.querySelector(".stars-bg");
-for (let i = 0; i < 80; i++) {
-  const star = document.createElement("div");
-  star.className = "star";
-  star.style.top = Math.random() * 100 + "vh";
-  star.style.left = Math.random() * 100 + "vw";
-  star.style.animationDuration = 1 + Math.random() * 2 + "s";
-  starsBg.appendChild(star);
+starsBg.innerHTML = ""; // Clear previous stars
+const leafColors = ["#8bc34a", "#ffb300", "#ff7043", "#a1887f", "#43a047"];
+for (let i = 0; i < 40; i++) {
+  const leaf = document.createElement("div");
+  leaf.className = "leaf";
+  leaf.style.left = Math.random() * 100 + "vw";
+  leaf.style.animationDuration = 5 + Math.random() * 5 + "s";
+  leaf.style.animationDelay = Math.random() * 4 + "s";
+
+  // SVG leaf shape
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "leaf-shape");
+  svg.setAttribute("viewBox", "0 0 18 18");
+  svg.innerHTML = `<path d="M9 2 Q13 6 9 16 Q5 6 9 2 Z" fill="${
+    leafColors[Math.floor(Math.random() * leafColors.length)]
+  }" />`;
+
+  leaf.appendChild(svg);
+  starsBg.appendChild(leaf);
 }
