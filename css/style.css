@@ -1539,8 +1539,8 @@ html {
 /* music button */
 #toggleAudioBtn {
   position: fixed;
-  right: 32px;
-  bottom: 95px;
+  right: 24px;
+  bottom: 80px;
   z-index: 9999;
   background: #f9f9fb;
   color: #222;
@@ -1588,8 +1588,8 @@ html {
 /* scroll up */
 #scrollUpBtn {
   position: fixed;
-  right: 32px;
-  bottom: 32px;
+  right: 24px;
+  bottom: 24px;
   z-index: 9999;
   background: #f9f9fb;
   color: #222;
