@@ -126,25 +126,28 @@ scrollBtn.onclick = function () {
 };
 
 // scroll down intro section
-document.getElementById("getStartedBtn").onclick = function (e) {
-  e.preventDefault();
-  const nextSection = document.getElementById("intro-section");
-  if (nextSection) {
-    const targetY =
-      nextSection.getBoundingClientRect().top + window.pageYOffset;
-    const startY = window.pageYOffset;
-    const duration = 1200; // ms, slower than default
-    let startTime = null;
+const getStartedBtn = document.getElementById("getStartedBtn");
+if (getStartedBtn) {
+  getStartedBtn.onclick = function (e) {
+    e.preventDefault();
+    const nextSection = document.getElementById("intro-section");
+    if (nextSection) {
+      const targetY =
+        nextSection.getBoundingClientRect().top + window.pageYOffset;
+      const startY = window.pageYOffset;
+      const duration = 1200; // ms, slower than default
+      let startTime = null;
 
-    function scrollStep(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      const ease = 0.5 * (1 - Math.cos(Math.PI * progress)); // easeInOut
-      window.scrollTo(0, startY + (targetY - startY) * ease);
-      if (progress < 1) {
-        window.requestAnimationFrame(scrollStep);
+      function scrollStep(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const ease = 0.5 * (1 - Math.cos(Math.PI * progress)); // easeInOut
+        window.scrollTo(0, startY + (targetY - startY) * ease);
+        if (progress < 1) {
+          window.requestAnimationFrame(scrollStep);
+        }
       }
+      window.requestAnimationFrame(scrollStep);
     }
-    window.requestAnimationFrame(scrollStep);
-  }
-};
+  };
+}
