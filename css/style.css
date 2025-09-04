@@ -739,14 +739,14 @@ ul.dropdown-menu li {
 }
 
 .cta {
-  background: url("https://cdn.jsdelivr.net/gh/huyratio5998/Ratio.Blog-Template/images/kimhue-group-1/image11.jpg")
+  background: url("https://cdn.jsdelivr.net/gh/huyratio5998/Ratio.Blog-Template/images/kimhue-group-2/image4.jpg")
     fixed 50% 50%;
   background-size: cover;
   padding: 120px 0px;
 }
 
 .cta-block {
-  background: url("https://cdn.jsdelivr.net/gh/huyratio5998/Ratio.Blog-Template/images/kimhue-group-1/image11.jpg")
+  background: url("https://cdn.jsdelivr.net/gh/huyratio5998/Ratio.Blog-Template/images/kimhue-group-2/image4.jpg")
     no-repeat;
   background-size: cover;
 }
@@ -864,7 +864,7 @@ ul.dropdown-menu li {
 }
 
 .portflio-item {
-  height: 250px; /* or any height you want */
+  height: 400px; /* or any height you want */
   overflow: hidden;
   position: relative;
 }
