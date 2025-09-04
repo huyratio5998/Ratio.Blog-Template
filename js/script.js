@@ -156,7 +156,7 @@ if (getStartedBtn) {
 const starsBg = document.querySelector(".stars-bg");
 starsBg.innerHTML = ""; // Clear previous stars
 const leafColors = ["#8bc34a", "#ffb300", "#ff7043", "#a1887f", "#43a047"];
-for (let i = 0; i < 40; i++) {
+for (let i = 0; i < 5; i++) {
   const leaf = document.createElement("div");
   leaf.className = "leaf";
   leaf.style.left = Math.random() * 100 + "vw";
