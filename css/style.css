@@ -826,6 +826,7 @@ ul.dropdown-menu li {
   right: 0px;
   bottom: 0px;
   opacity: 0;
+  padding-left: 15px;
   transition: all 0.35s ease;
 }
 
