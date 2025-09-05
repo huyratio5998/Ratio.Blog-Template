@@ -1687,3 +1687,147 @@ html {
     transform: translateY(100vh) rotate(540deg) scale(0.9);
   }
 }
+
+/*custom style*/
+
+/*title animation*/
+	h1:hover,
+    h2:hover,
+    h3:hover,
+    h4:hover {
+      transform: scale(1.07);
+      transition: transform 0.2s, text-shadow 0.2s;
+      text-shadow:
+        0 0 8px #ff3c00,        
+        0 0 16px #ffd700;           
+    }
+
+	.no-hover:hover {
+      transform: none !important;
+      text-shadow: none !important;      
+    }
+
+/*underline animation*/
+	.hover-underline {      
+      color: #ffffff;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hover-underline::after,
+    .hover-underline::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #ff0000, #00ffff);
+      bottom: -5px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease-out;
+    }
+
+    .hover-underline::before {
+      top: -5px;
+      transform-origin: left;
+    }
+
+    .hover-underline:hover::after,
+    .hover-underline:hover::before {
+      transform: scaleX(1);
+    }
+
+/*glass card animation*/
+    .glass-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(30, 30, 30, 0.7);
+      box-shadow:
+        0 8px 32px 0 rgba(31, 38, 135, 0.18),
+        0 2px 8px 0 rgba(0, 0, 0, 0.25),
+        0 0 0 4px rgba(255, 255, 255, 0.04);
+      transition: box-shadow 0.4s, border 0.4s, transform 0.4s;
+      border: 2px solid transparent;
+      will-change: transform, box-shadow;
+    }
+
+    .glass-card:hover {
+      box-shadow:
+        0 0 32px 8px rgba(0, 255, 150, 0.25),
+        0 16px 48px 0 rgba(31, 38, 135, 0.28),
+        0 0 0 8px #ffd70044;
+      border-image: linear-gradient(90deg, #ff0057, #00ffae, #00c3ff, #ffd700) 1;
+      border-width: 2px;
+      border-style: solid;
+      transform: scale(1.04) translateY(-8px);
+    }
+
+    .glass-card-content {
+      position: relative;
+      z-index: 2;
+      padding: 24px 20px 18px 20px;
+      color: #fff;
+      background: linear-gradient(180deg, rgba(30, 30, 30, 0.01) 60%, rgba(30, 30, 30, 0.85) 100%);
+      margin-top: -60px;
+    }
+
+    .glass-card-date {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .glass-card-date.red {
+      color: #ff0057;
+    }
+
+    .glass-card-date.orange {
+      color: #ffd700;
+    }
+
+    .glass-card-date.green {
+      color: #00ffae;
+    }
+
+    .glass-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .glass-card-text {
+      font-size: 0.98rem;
+      color: #ccc;
+      margin-bottom: 0;
+    }
+
+/*mini-bar animation*/
+    .mini-navbar {
+      display: none;
+      position: fixed;
+      top: 0;
+	  left: 0;
+      width: 100%;
+      z-index: 9999;
+      background-color: #051255;
+      color: white;
+      padding: 8px 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+      font-weight: 600;
+	  text-transform: uppercase;
+    }
+
+    .mini-navbar .container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mini-navbar img {
+      height: 30px;
+      vertical-align: middle;
+    }
