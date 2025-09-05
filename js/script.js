@@ -194,9 +194,3 @@ window.addEventListener('scroll', function () {
       }
     }
   });
-// add layzy load
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll('img:not([loading])').forEach(img => {
-    img.setAttribute('loading', 'lazy');
-  });
-});
