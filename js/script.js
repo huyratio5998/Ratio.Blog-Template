@@ -23,6 +23,11 @@
     arrows: false,
     autoplay: true,
     autoplaySpeed: 6000,
+    swip: true,
+    touchMove: true,
+    touchThreshold: 10,
+    speed: 300,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 1024,
