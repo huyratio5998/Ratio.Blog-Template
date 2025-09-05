@@ -26,7 +26,7 @@
     swip: true,
     touchMove: true,
     touchThreshold: 10,
-    speed: 300,
+    speed: 150,
     waitForAnimate: false,
     responsive: [
       {
