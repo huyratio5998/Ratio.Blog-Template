@@ -27,6 +27,7 @@
     touchMove: true,
     touchThreshold: 10,
     speed: 150,
+    easing: 'easeInOutCubic',
     waitForAnimate: false,
     responsive: [
       {
