@@ -182,3 +182,15 @@ for (let i = 0; i < 5; i++) {
   leaf.appendChild(svg);
   starsBg.appendChild(leaf);
 }
+
+// mini nav bar
+window.addEventListener('scroll', function () {    
+    const stickyBar = document.getElementById('miniStickyBar');
+    if (stickyBar) {
+      if (window.scrollY > 100) {
+        stickyBar.style.display = 'block';
+      } else {
+        stickyBar.style.display = 'none';
+      }
+    }
+  });
