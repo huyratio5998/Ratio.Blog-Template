@@ -1489,10 +1489,10 @@ h3.quote::before {
   .footer-socials li a {
     margin-left: 0px;
   }
-  /* .slider .block h1 {
-    font-size: 56px;
-    line-height: 70px;
-  } */
+  .slider .block h1 {
+    font-size: 38px;
+    line-height: 50px;
+  }
   .blog-item-meta span {
     display: block;
     margin: 6px 0px;
