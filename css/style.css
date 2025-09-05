@@ -1476,13 +1476,16 @@ h3.quote::before {
   }
 }
 
+@media (max-width: 576px) {
+	.bg-about {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-toggler {
     color: #fff;
-  }
-  .bg-about {
-    display: none;
-  }
+  }  
   .footer-socials {
     margin-top: 20px;
   }
