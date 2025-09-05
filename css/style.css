@@ -444,7 +444,7 @@ a:focus {
   padding-left: 15px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .pt-desktop-100 {
     padding-top: 100px !important;
   }
